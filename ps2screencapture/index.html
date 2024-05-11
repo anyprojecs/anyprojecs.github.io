@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Grabber</title>
+</head>
+<body>
+    <div id="preview">
+        <video id="videoElement" autoplay></video>
+        <audio id="audioElement" autoplay></audio>
+        <button class="fullscreen-button" onclick="toggleFullScreen()">Fullscreen</button>
+        PS2 Screen Capture BETA
+    </div>
+    <script>
+        const videoElement = document.getElementById('videoElement');
+        const audioElement = document.getElementById('audioElement');
+
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 800, height: 600, facingMode: 'environment' }, audio: false });
+                videoElement.srcObject = stream;
+
+                // Pobieramy element wideo
+                const video = document.getElementById('videoElement');
+
+                // Dodajemy filtr CSS do regulacji kontrastu
+                video.style.filter = 'contrast(85%)'; // Możesz dostosować wartość procentową według potrzeb
+            } catch (err) {
+                console.error('Wystąpił błąd podczas uruchamiania kamery:', err);
+            }
+        }
+
+
+        async function startMicrophone() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, autoGainControl: false, noiseSuppression: false } });
+                audioElement.srcObject = stream;
+            } catch (err) {
+                console.error('Wystąpił błąd podczas uruchamiania mikrofonu:', err);
+            }
+        }
+
+        // Uruchomienie kamery i mikrofonu automatycznie po załadowaniu strony
+        window.addEventListener('DOMContentLoaded', (event) => {
+            startCamera();
+            startMicrophone();
+        });
+        function toggleFullScreen() {
+            var video = document.getElementById('videoElement');
+            if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
