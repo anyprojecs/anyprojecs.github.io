@@ -4,33 +4,41 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
+    background: rgb(172,127,147);
+    background: radial-gradient(circle, rgba(172,127,147,1) 0%, rgba(123,155,192,1) 100%); 
+    color: #ffffffaa;
 }
 #header{
-    background-color: #fff;
     font-size: 60px;
     font-weight: 100;
     padding: 20px;
     text-align: center;
 }
 #middletext{
-    color: #fff;
+    width: 800px;
+    color: #ffffffcc;
     padding: 175px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     font-size: 150px;
-    background: rgb(0,249,165);
-    background: linear-gradient(0deg, rgba(0,249,165,1) 0%, rgba(0,255,254,1) 100%); 
+    background: rgb(255,255,255);
+    background: linear-gradient(245deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.35) 90%); 
     font-family: 'Ravenda', sans-serif;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    -moz-box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    margin-top: 50px;
 }
 #content{
-    background-color: #fff;
     width: auto;
     padding: 100px;
     text-align: center;
 }
 a{
-    color: #000;
+    color: #ffffff77;
     font-weight: 500;
     text-decoration: none;
     margin-left: 25px;
@@ -39,5 +47,6 @@ a{
 #footer{
     text-align: center;
     padding: 25px;
-    border-top: 1px #eee solid;
+    border-top: 1px #ffffff33 solid;
+    color: #ffffffaa;
 }
