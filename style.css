@@ -15,7 +15,7 @@ body{
     text-align: center;
 }
 #middletext{
-    width: 800px;
+    width: 700px;
     color: #ffffffcc;
     padding: 175px;
     margin-left: auto;
@@ -49,4 +49,16 @@ a{
     padding: 25px;
     border-top: 1px #ffffff33 solid;
     color: #ffffffaa;
+}
+@media only screen and (max-width: 1079px) {
+    #header{
+        font-size: 45px;
+    }
+    #middletext{
+        display: none;
+    }
+    a{
+        display: block;
+        margin-top: 20px;
+    }
 }
