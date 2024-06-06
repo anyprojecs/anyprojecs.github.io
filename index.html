@@ -1,27 +1,64 @@
-<!DOCTYPE html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Anyprojecs</title>
-    </head>
-    <body>
-        <div id="container">
-            <div id="header">
-                ANYPROJECS
-            </div>
-            <div id="middletext">
-                ANYPROJECS
-            </div>
-            <div id="content">
-                <h1>Welcome to Anyprojecs site!</h1>
-                Here I'll make random projects that aren't big enough to make separate site for them.<br><br>
-                Here they are!<br><br>
-                <a href="ps2screencapture">PS2 Screen Capture</a>
-                <a href="thefraudishere">The fraud is here!</a>
-                <a href="minecraft">Minecraft in browser</a>
-                <a href="https://dexii.ovh" target="_blank">My site! <p style="font-size: 10px; color: #ffffff66; display: inline;">( that's an exception 😭)</p></a>
-            </div>
-            <div id="footer">anyprojecs &copy; 2024 by dexi</div>
-        </div>
-    </body>
-</html>
+@import url('https://fonts.cdnfonts.com/css/ravenda');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background: rgb(172,127,147);
+    background: radial-gradient(circle, rgba(172,127,147,1) 0%, rgba(123,155,192,1) 100%); 
+    color: #ffffffaa;
+}
+#header{
+    font-size: 60px;
+    font-weight: 100;
+    padding: 20px;
+    text-align: center;
+}
+#middletext{
+    width: 700px;
+    color: #ffffffcc;
+    padding: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 150px;
+    background: rgb(255,255,255);
+    background: linear-gradient(245deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.35) 90%); 
+    font-family: 'Ravenda', sans-serif;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    -moz-box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    margin-top: 50px;
+}
+#content{
+    width: auto;
+    padding: 100px;
+    text-align: center;
+}
+a{
+    color: #ffffff77;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#footer{
+    text-align: center;
+    padding: 25px;
+    border-top: 1px #ffffff33 solid;
+    color: #ffffffaa;
+}
+@media only screen and (max-width: 1079px) {
+    #header{
+        font-size: 45px;
+    }
+    #middletext{
+        display: none;
+    }
+    a{
+        display: block;
+        margin-top: 20px;
+    }
+}
