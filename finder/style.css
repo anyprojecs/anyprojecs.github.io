@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff00;
+    text-align: center;
+    background: rgb(172,127,147);
+    background: radial-gradient(circle, rgba(172,127,147,1) 0%, rgba(123,155,192,1) 100%); 
+    font-size: 48px;
+}
+form{
+    width: auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: #ffffff99;
+}
+#searchbar{
+    height: 47px;
+    width: 360px;
+    border-radius: 24px 0px 0px 24px;
+    border: 3px solid #ffffff33;
+    background-color: #ffffff00;
+}
+input[type=text]{
+    color: #ffffffaa;
+    text-align: center;
+}
+#button{
+    width: 48px;
+    height: 55px;
+    border-radius: 0px 24px 24px 0px;
+    border: 3px solid #ffffff33;
+    border-left: none;
+    background-color: #ffffff00;
+}
+#button:hover{
+    cursor: pointer;
+}
