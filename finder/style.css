@@ -4,8 +4,10 @@ body{
     font-family: "Montserrat", sans-serif;
     color: #ffffff00;
     text-align: center;
-    background: rgb(172,127,147);
-    background: radial-gradient(circle, rgba(172,127,147,1) 0%, rgba(123,155,192,1) 100%); 
+    background: rgb(142,251,255);
+    background: linear-gradient(-45deg, rgba(142,251,255,1) 0%, rgba(255,225,255,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-size: 48px;
 }
 form{
@@ -15,27 +17,45 @@ form{
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    color: #ffffff99;
+    color: #ffffff;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.178);
 }
 #searchbar{
     height: 48px;
     width: 360px;
     border-radius: 48px;
-    border: 3px solid #ffffff33;
-    background-color: #ffffff00;
+    border: 3px solid #ffffff;
+    background-color: #00000005;
+    -webkit-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.15);
+-moz-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.15);
+box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.15);
+}
+#searchbar:hover{
+    border: 3px solid #ffffff;
 }
 input[type=text]{
-    color: #ffffffaa;
+    color: #00000044;
     text-align: center;
+    transition: transform .2s;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.178);
+}
+input[type=text]:hover{
+    transform: scale(1.05);
 }
 #button{
     width: 52px;
     height: 52px;
     border-radius: 100%;
-    border: 3px solid #ffffff33;
-    background-color: #ffffff00;
-    color: #ffffff77;
+    border: 3px solid #ffffff;
+    background-color: #00000011;
+    color: #ffffff;
+    transition: transform .2s;
+    -webkit-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.5);
+box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.5);
 }
 #button:hover{
+    transform: scale(1.2);
     cursor: pointer;
+    border: 3px solid #ffffff;
 }
