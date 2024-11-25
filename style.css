@@ -1,61 +1,76 @@
+@import url('https://fonts.cdnfonts.com/css/ravenda');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body{
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
-    color: #ffffff00;
+    background: rgb(172,127,147);
+    background: radial-gradient(circle, rgba(172,127,147,1) 0%, rgba(123,155,192,1) 100%); 
+    color: #ffffffaa;
     text-align: center;
-    background: rgb(142,251,255);
-    background: linear-gradient(-45deg, rgba(142,251,255,1) 0%, rgba(255,225,255,1) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-size: 48px;
 }
-form{
+#header{
+    font-size: 60px;
+    font-weight: 100;
+    padding: 20px;
+    text-align: center;
+}
+#middletext{
+    width: 800px;
+    color: #ffffffcc;
+    padding: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 150px;
+    background: rgb(255,255,255);
+    background: linear-gradient(245deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.35) 90%); 
+    font-family: 'Ravenda', sans-serif;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    -moz-box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    box-shadow: 0px 0px 57px -23px rgba(255, 255, 255, 228);
+    margin-top: 50px;
+}
+#content{
     width: auto;
     text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    color: #ffffff;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.178);
 }
-#searchbar{
-    height: 48px;
-    width: 360px;
-    border-radius: 48px;
-    border: 3px solid #ffffff;
-    background-color: #00000005;
-    -webkit-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.15);
--moz-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.15);
-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.15);
+a{
+    color: #ffffff77;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 25px;
+    margin-right: 25px;
+    transition: transform .2s;
 }
-#searchbar:hover{
-    border: 3px solid #ffffff;
+a:hover{
+    transform: scale(1.1);
 }
-input[type=text]{
-    color: #00000044;
+#footer{
     text-align: center;
-    transition: transform .2s;
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.178);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px #ffffff33 solid;
+    color: #ffffffaa;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
 }
-input[type=text]:hover{
-    transform: scale(1.05);
-}
-#button{
-    width: 52px;
-    height: 52px;
-    border-radius: 100%;
-    border: 3px solid #ffffff;
-    background-color: #00000011;
-    color: #ffffff;
-    transition: transform .2s;
-    -webkit-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.5);
--moz-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.5);
-box-shadow: 0px 0px 27px -10px rgba(0, 0, 0, 0.5);
-}
-#button:hover{
-    transform: scale(1.2);
-    cursor: pointer;
-    border: 3px solid #ffffff;
+@media only screen and (max-width: 1079px) {
+    #header{
+        font-size: 45px;
+    }
+    #middletext{
+        display: none;
+    }
+    a{
+        display: block;
+        margin-top: 20px;
+    }
 }
