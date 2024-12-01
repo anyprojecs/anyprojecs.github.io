@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <img id="background" width="100%" height="100%" src="back.webp">
+
+        <div id="header">
+            StoneSlots
+        </div>
+
+        <div id="game">
+            <p id="numbers">GAMBLE!</p>
+            <button onclick="Run()">$</button>
+        </div>
+        <p id="error">Not enough money</p>
+        <div id="bottombar">
+            <button onclick="document.getElementById('sellmenu').style.display = 'block';">Sell</button>
+            <button onclick="document.getElementById('cheatmenu').style.display = 'block';">Cheats</button>
+            <p id="money">0</p>
+        </div>
+
+        <div class="menu" id="sellmenu">
+            <h1>Sell</h1>
+            <button onclick="sellCar()">Car $1500</button>
+            <br><br>
+            <button onclick="document.getElementById('sellmenu').style.display = 'none';">Close</button>
+        </div>
+
+        <div class="menu" id="cheatmenu">
+            <h1>Cheat menu</h1>
+            <button onclick="AddMoney()">add money</button>
+            <br><br>
+            <button onclick="document.getElementById('cheatmenu').style.display = 'none';">Close</button>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
