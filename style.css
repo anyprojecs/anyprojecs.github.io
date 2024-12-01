@@ -48,6 +48,7 @@ a{
     margin-left: 25px;
     margin-right: 25px;
     transition: transform .2s;
+    margin-bottom: 10px;
 }
 a:hover{
     transform: scale(1.1);
