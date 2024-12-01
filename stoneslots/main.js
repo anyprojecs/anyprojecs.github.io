@@ -1,8 +1,5 @@
 let money = 600
 
-let car = 1
-
-
 function updateMoney() {
     const moneyCount = document.getElementById("money");
     moneyCount.textContent = "$"+money;
@@ -14,19 +11,6 @@ function AddMoney() {
     document.getElementById("money").innerHTML="Money: "+money;
 }
 
-function sellCar() {
-    if (car == 1) {
-        money += 1500
-        car -= 1
-        updateMoney();
-    }
-    else {
-        document.getElementById("error").innerHTML="You don't have a car!";
-        document.getElementById("error").style.display="inline-block";
-        setTimeout(hideError(), 10000)
-    }
-}
-
 function hideError() {
     document.getElementById("error").style.display="none";
 }
@@ -36,7 +20,6 @@ function Run() {
         console.log("oops");
     }
     else {
-        document.getElementById("background").display = "inline-block";
         document.getElementById("numbers").style.animation = "none";
         document.body.style.animation = "none";
         money -= 25
@@ -47,9 +30,8 @@ function Run() {
         firstNum + "" + secondNum + "" + thirdNum;
         updateMoney();
         if (firstNum == 7 && secondNum == 7 && thirdNum == 7) {
-            money += 2000
+            money += 3500
             updateMoney();
-            document.getElementById("background").display = "none";
             document.body.style.animationName = "backChange";
             document.body.style.animationDuration = "3s";
             document.body.style.animationIterationCount = "infinite";
@@ -58,7 +40,7 @@ function Run() {
             document.getElementById("numbers").style.animationIterationCount = "Infinite";
         }
         else if (firstNum == secondNum && secondNum == thirdNum) {
-            money += 500
+            money += 1000
             document.getElementById("numbers").style.animationName = "colorChange";
             document.getElementById("numbers").style.animationDuration = "3s";
             document.getElementById("numbers").style.animationIterationCount = "Infinite";
