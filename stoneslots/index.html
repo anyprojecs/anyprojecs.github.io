@@ -19,13 +19,15 @@
         <div id="bottombar">
             <button onclick="document.getElementById('sellmenu').style.display = 'block';">Sell</button>
             <button onclick="document.getElementById('cheatmenu').style.display = 'block';">Cheats</button>
+            <button onclick="document.getElementById('helpmenu').style.display = 'block';">Help</button>
             <p id="money">0</p>
         </div>
 
         <div class="menu" id="sellmenu">
             <h1>Sell</h1>
+            <button onclick="sellPC()">PC $250</button>
             <button onclick="sellCar()">Car $1500</button>
-            <br><br>
+            <br><br><br>
             <button onclick="document.getElementById('sellmenu').style.display = 'none';">Close</button>
         </div>
 
@@ -36,6 +38,18 @@
             <button onclick="document.getElementById('cheatmenu').style.display = 'none';">Close</button>
         </div>
 
+        <div class="menu" id="helpmenu">
+            <h1>Help</h1>
+            Each game costs $25.<br>
+            For three same numbers you get $1000.<br>
+            For three 7s you get $3500
+            <br><br>
+            ATTENTION! THESE ARE <b>NOT</b> REAL MONEY!
+            <br><br>
+            <button onclick="document.getElementById('helpmenu').style.display = 'none';">Close</button>
+        </div>
+
         <script src="main.js"></script>
+        <script src="selling.js"></script>
     </body>
 </html>
