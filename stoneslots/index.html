@@ -3,6 +3,7 @@
     <head>
         <title>StoneSlots</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mobile.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -14,12 +15,13 @@
 
         <div id="game">
             <p id="numbers">GAMBLE!</p>
-            <button onclick="Run()">$</button>
+            <button id="price" onclick="Run()">$5</button>
         </div>
         <p id="error">Not enough money</p>
         <div id="bottombar">
             <button onclick='showMenu("sellmenu")'>Sell</button>
             <button onclick='showMenu("loanmenu")'>Loans</button>
+            <button onclick='showMenu("machinesmenu")'>Machines</button>
             <button onclick='showMenu("cheatmenu")' id="cheatsbutton">Cheats</button>
             <button onclick='showMenu("helpmenu")'>Help</button>
             <p id="money">0</p>
@@ -34,9 +36,15 @@
         </div>
         <div class="menu" id="loanmenu">
             <h1>Take a loan</h1>
-            <button onclick="tookLoan()">$1200 | 16.7% interest rate</button>
+            <button onclick="tookLoan(1200)">$1200 | 16.67% interest rate</button>
+            <button onclick="tookLoan(5400)">$5400 | 3.70% interest rate</button>
             <br><br>
-            <button onclick="hideMenu('loanmenu');">Close</button>s
+            <button onclick="hideMenu('loanmenu');">Close</button>
+        </div>
+        <div class="menu" id="machinesmenu">
+            <h1>Select machine</h1>
+            <button onclick="selectMachines(5)">$5</button>
+            <button onclick="selectMachines(50)">$50</button>
         </div>
         <div class="menu" id="cheatmenu">
             <h1>Cheat menu</h1>
