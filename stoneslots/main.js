@@ -1,5 +1,8 @@
-let money = 600
+var money = 600
 
+function cheatsOn() {
+    cheaton = document.getElementById("cheatsbutton").style.display="inline-block";
+}
 function updateMoney() {
     const moneyCount = document.getElementById("money");
     moneyCount.textContent = "$"+money;
@@ -11,15 +14,28 @@ function AddMoney() {
     document.getElementById("money").innerHTML="Money: "+money;
 }
 
+function showMenu(menu) {
+    document.getElementById(menu).style.display="block";
+}
+function hideMenu(menu) {
+    document.getElementById(menu).style.display="none";
+}
+
 function hideError() {
     document.getElementById("error").style.display="none";
 }
+function showError(text) {
+    document.getElementById("error").innerHTML=text;
+    document.getElementById("error").style.display="inline-block";
+    setTimeout(hideError, 1500);
+}
 
 function Run() {
-    if (money == 0) {
-        console.log("oops");
+    if (money < 1) {
+        showError("You don't have money!");
     }
     else {
+        payLoan();
         document.getElementById("numbers").style.animation = "none";
         document.body.style.animation = "none";
         money -= 25
@@ -30,7 +46,7 @@ function Run() {
         firstNum + "" + secondNum + "" + thirdNum;
         updateMoney();
         if (firstNum == 7 && secondNum == 7 && thirdNum == 7) {
-            money += 3500
+            money += 3000
             updateMoney();
             document.body.style.animationName = "backChange";
             document.body.style.animationDuration = "3s";
@@ -40,7 +56,7 @@ function Run() {
             document.getElementById("numbers").style.animationIterationCount = "Infinite";
         }
         else if (firstNum == secondNum && secondNum == thirdNum) {
-            money += 1000
+            money += 800
             document.getElementById("numbers").style.animationName = "colorChange";
             document.getElementById("numbers").style.animationDuration = "3s";
             document.getElementById("numbers").style.animationIterationCount = "Infinite";
