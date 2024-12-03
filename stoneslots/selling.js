@@ -1,3 +1,4 @@
+
 let pc = 1
 let car = 1
 
@@ -6,11 +7,10 @@ function sellPC() {
         money += 250
         pc -= 1
         updateMoney();
+        document.getElementById("sellpc").innerText="SOLD";
     }
     else {
-        document.getElementById("error").innerHTML="You don't have a car!";
-        document.getElementById("error").style.display="inline-block";
-        setTimeout(hideError(), 10000)
+        showError("You have already sold the PC!");
     }
 }
 function sellCar() {
@@ -18,10 +18,9 @@ function sellCar() {
         money += 1500
         car -= 1
         updateMoney();
+        document.getElementById("sellcar").innerText="SOLD";
     }
     else {
-        document.getElementById("error").innerHTML="You don't have a car!";
-        document.getElementById("error").style.display="inline-block";
-        setTimeout(hideError(), 10000)
+        showError("You have already sold the car!")
     }
 }
