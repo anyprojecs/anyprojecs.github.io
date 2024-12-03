@@ -1,4 +1,6 @@
-var money = 600
+let money = 600;
+
+selectMachines(5);
 
 function cheatsOn() {
     cheaton = document.getElementById("cheatsbutton").style.display="inline-block";
@@ -30,15 +32,33 @@ function showError(text) {
     setTimeout(hideError, 1500);
 }
 
+function selectMachines(machine) {
+    if (machine == 5) {
+        console.log(machine);
+        price = 5;
+        threeNumbers = 200;
+        threeSevens = 1500;
+        document.getElementById("price").innerText="$5"
+    }
+    if (machine == 50) {
+        console.log(machine);
+        price = 50;
+        threeNumbers = 2500;
+        threeSevens = 7500;
+        document.getElementById("price").innerText="$50"
+    }
+    document.getElementById("machinesmenu").style.display="none";
+}
+
 function Run() {
-    if (money < 1) {
+    if (money < price) {
         showError("You don't have money!");
     }
     else {
         payLoan();
         document.getElementById("numbers").style.animation = "none";
         document.body.style.animation = "none";
-        money -= 25
+        money -= price
         const firstNum = Math.floor(Math.random() * 7) + 1;
         const secondNum = Math.floor(Math.random() * 7) + 1;
         const thirdNum = Math.floor(Math.random() * 7) + 1;
@@ -46,7 +66,7 @@ function Run() {
         firstNum + "" + secondNum + "" + thirdNum;
         updateMoney();
         if (firstNum == 7 && secondNum == 7 && thirdNum == 7) {
-            money += 3000
+            money += threeSevens
             updateMoney();
             document.body.style.animationName = "backChange";
             document.body.style.animationDuration = "3s";
@@ -56,7 +76,7 @@ function Run() {
             document.getElementById("numbers").style.animationIterationCount = "Infinite";
         }
         else if (firstNum == secondNum && secondNum == thirdNum) {
-            money += 800
+            money += threeNumbers
             document.getElementById("numbers").style.animationName = "colorChange";
             document.getElementById("numbers").style.animationDuration = "3s";
             document.getElementById("numbers").style.animationIterationCount = "Infinite";
