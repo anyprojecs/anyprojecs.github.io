@@ -47,6 +47,20 @@ function selectMachines(machine) {
         threeSevens = 7500;
         document.getElementById("price").innerText="$50"
     }
+    if (machine == 150) {
+        console.log(machine);
+        price = 150;
+        threeNumbers = 7500;
+        threeSevens = 20000;
+        document.getElementById("price").innerText="$150"
+    }
+    if (machine == 1500) {
+        console.log(machine);
+        price = 1500;
+        threeNumbers = 25000;
+        threeSevens = 75000;
+        document.getElementById("price").innerText="$1500"
+    }
     document.getElementById("machinesmenu").style.display="none";
 }
 
