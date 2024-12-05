@@ -57,24 +57,26 @@ button{
   display: none;
   padding: 50px;
   text-align: center;
-  background-color: #444444aa;
-  color: #fff;
+  background-color: #000000aa;
+  color: #ffffffc5;
   width: auto;
   transform: translate(-50%,-50%);
   top: 50%;
   left: 50%;
   position: absolute;
   border-radius: 15px;
-  border: 4px solid #666;
+  border: 2px solid #000;
 }
 .menu button{
   padding: 16px;
   width: 200px;
-  border: 3px solid #ffffffaa;
+  border: 1px solid #000;
   background-color: #00000000;
   border-radius: 48px;
-  color: #fff;
+  color: #ffffffc5;
   transition: transform .1s;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 .menu button:active{ 
   transform: scale(0.9);
@@ -124,26 +126,44 @@ button{
 #bottombar{
   position: absolute;
   bottom: 0px;
-  width: 100%;
+  width: 98.5%;
+  padding-left: 0.5%;
   height: 48px;
-  background-color: #444444aa;
-  border-top: 4px solid #88888855;
-  border-bottom: 4px solid #333333aa;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.7603932927163799) 0%, rgba(44,44,44,0.7294944163118855) 49%, rgba(56,56,56,0.7379213826040203) 50%, rgba(50,50,50,0.8783708208062675) 100%); 
+  border: 1px solid #000;
   color: #fff;
+  border-radius: 24px;
+  margin-left: 0.5%;
+  margin-bottom: 0.5%;
 }
 #bottombar button{
   height: 48px;
-  padding-left: 20px;
-  border-radius: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
   background-color: #44444400;
   border: none;
-  color: #fff;
+  color: #ffffff99;
   font-size: 24px;
+  margin: 1px;
+}
+#bottombar button:hover{
+  margin: 0;
+  color: #fff;
+  border: 1px solid #000;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(44,44,44,1) 49%, rgba(56,56,56,1) 50%, rgba(50,50,50,1) 100%); 
+}
+#bottombar button:active{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(44,44,44,1) 49%, rgba(56,56,56,1) 50%, rgba(50,50,50,1) 100%); 
 }
 #money{
   margin: 0;
   display: inline;
   float: right;
   margin-right: 20px;
-  font-size: 43px;
+  font-size: 36px;
+  color: #ffffff99;
 }
