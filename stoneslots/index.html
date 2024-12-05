@@ -6,15 +6,15 @@
         <link rel="stylesheet" href="mobile.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1472GN6T44"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-1472GN6T44');
-        </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1472GN6T44"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1472GN6T44');
+    </script>
     <body>
         <img id="background" width="100%" height="100%" src="back.webp">
 
@@ -32,7 +32,7 @@
             <button onclick='showMenu("loanmenu")'>Loans</button>
             <button onclick='showMenu("machinesmenu")'>Machines</button>
             <button onclick='showMenu("cheatmenu")' id="cheatsbutton">Cheats</button>
-            <button onclick='showMenu("helpmenu")'>Help</button>
+            <button onclick='showMenu("miscmenu")'>Misc</button>
             <p id="money">0</p>
         </div>
 
@@ -40,20 +40,28 @@
             <h1>Sell</h1>
             <button id="sellpc" onclick="sellPC()">PC $250</button>
             <button id="sellcar" onclick="sellCar()">Car $1500</button>
-            <br><br><br>
+            <br>
             <button onclick="hideMenu('sellmenu');">Close</button>
         </div>
         <div class="menu" id="loanmenu">
             <h1>Take a loan</h1>
             <button onclick="tookLoan(1200)">$1200 | 16.67% interest rate</button>
             <button onclick="tookLoan(5400)">$5400 | 3.70% interest rate</button>
-            <br><br>
+            <br>
             <button onclick="hideMenu('loanmenu');">Close</button>
         </div>
         <div class="menu" id="machinesmenu">
             <h1>Select machine</h1>
             <button onclick="selectMachines(5)">$5</button>
             <button onclick="selectMachines(50)">$50</button>
+            <button onclick="selectMachines(150)">$150</button>
+            <button onclick="selectMachines(1500)">$1500</button>
+        </div>
+        <div class="menu" id="miscmenu">
+            <h1>Misc</h1>
+            <button onclick="donMenu()">Double or nothing</button>
+            <br>
+            <button onclick="hideMenu('miscmenu');">Close</button>
         </div>
         <div class="menu" id="cheatmenu">
             <h1>Cheat menu</h1>
@@ -71,7 +79,16 @@
             <button onclick="hideMenu('helpmenu');">Close</button>
         </div>
 
+        <div class="menu" id="donmenu">
+            <h1>Double or nothing</h1>
+            <p id="doninfo"></p>
+            <button onclick="don()">Double or nothing!</button>
+            <br>
+            <button onclick="hideMenu('donmenu');">Close</button>
+        </div>
+
         <script src="main.js"></script>
+        <script src="misc.js"></script>
         <script src="loans.js"></script>
         <script src="selling.js"></script>
     </body>
