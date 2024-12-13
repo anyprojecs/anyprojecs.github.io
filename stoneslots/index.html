@@ -6,27 +6,20 @@
         <link rel="stylesheet" href="mobile.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1472GN6T44"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-1472GN6T44');
-    </script>
     <body>
-        <img id="background" width="100%" height="100%" src="back.webp">
+        <div id="background"></div>
 
         <div id="header">
             StoneSlots
         </div>
 
         <div id="game">
-            <p id="numbers">GAMBLE!</p>
+            <p class="numbers" id="number1"></p><p class="numbers" id="number2">GAMBLE!</p><p class="numbers" id="number3" ></p>
+            <br>
             <button id="price" onclick="Run()">$5</button>
         </div>
-        <p id="error">Not enough money</p>
+        <p id="error">Error</p>
+        <div id="notification">Notification</div>
         <div id="bottombar">
             <button onclick='showMenu("sellmenu")'>Sell</button>
             <button onclick='showMenu("loanmenu")'>Loans</button>
@@ -60,12 +53,16 @@
         <div class="menu" id="miscmenu">
             <h1>Misc</h1>
             <button onclick="donMenu()">Double or nothing</button>
+            <button onclick="boxMenu()">Mystery boxes</button>
+            <button onclick="rouletteMenu()">Roulette</button>
             <br>
             <button onclick="hideMenu('miscmenu');">Close</button>
         </div>
         <div class="menu" id="cheatmenu">
             <h1>Cheat menu</h1>
             <button onclick="AddMoney()">add money</button>
+            <button onclick="silverKey += 10">more silver keys</button>
+            <button onclick="goldenKey += 10">more golden keys</button>
             <br><br>
             <button onclick="hideMenu('cheatmenu');">Close</button>
         </div>
@@ -85,6 +82,26 @@
             <button onclick="don()">Double or nothing!</button>
             <br>
             <button onclick="hideMenu('donmenu');">Close</button>
+        </div>
+
+        <div class="menu" id="boxmenu">
+            <h1>Mystery boxes</h1>
+            Your keys:
+            <p id="keys">pls do not break the game you silly</p>
+            <button onclick="openBox('silver');">Open a Silver box</button>
+            <button onclick="openBox('golden');">Open a Golden box</button>
+            <br>
+            <button onclick="hideMenu('boxmenu');">Close</button>
+        </div>
+
+        <div class="menu" id="roulettemenu">
+            <h1>Roulette</h1>
+            <div id="roulette">
+                <p id="rouletteball">●</p>
+            </div>
+            <button onclick="roulette()">Spin!</button>
+            <br>
+            <button onclick="hideMenu('roulettemenu');">Close</button>
         </div>
 
         <script src="main.js"></script>
