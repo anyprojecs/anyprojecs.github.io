@@ -28,11 +28,15 @@
   0% {color: #ff0000;}
   100% {color: #ff000000;}
 }
+@keyframes christmasLogo {
+  0% {text-shadow: 0px 0px 50px rgb(252, 0, 0);}
+  100% {text-shadow: 0px 0px 50px rgb(15, 126, 0);}
+}
 body{
   margin: 0;
   padding: 0;
   font-family: 'Florida Project Phase One', sans-serif;
-  background-color: #331d14;
+  background-color: #000000;
 }
 button{
   cursor: pointer;
@@ -42,16 +46,23 @@ button{
   filter: blur(30px);
   -webkit-filter: blur(30px);
   position: absolute;
+  background: url(back.webp);
+  height: 100%;
+  width: 100%;
 }
 #header{
   font-size: 64px;
   position: absolute;
   text-align: center;
   width: 100%;
-  color: #ffffffcc;
+  color: #ffffffaa;
   margin-top: 10px;
   font-family: 'Casino', sans-serif;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+  animation-name: christmasLogo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .menu{
   display: none;
@@ -103,7 +114,7 @@ button{
   transform: scale(0.8);
 }
 #error{
-  color: #ff0000;
+  color: #ffffff99;
   bottom: 50px;
   position: absolute;
   transform: translate(-50%);
@@ -112,26 +123,53 @@ button{
   animation: none;
   display: none;
   text-align: center;
+  background: rgb(110,69,69);
+  background: linear-gradient(180deg, rgba(110,69,69,0.7941011578849193) 0%, rgba(50,0,0,0.7463483488961552) 50%, rgba(67,0,0,0.7463483488961552) 51%, rgba(48,0,0,0.7463483488961552) 100%); 
+  border: 1px solid #400;
+  border-radius: 10px;
+  padding: 10px;
+}
+#notification{
+  position: absolute;
+  color: #ffffff99;
+  padding: 10px;
+  top: 100px;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  font-size: 26px;
+  animation: none;
+  display: none;
+  text-align: center;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.7603932927163799) 0%, rgba(44,44,44,0.7294944163118855) 49%, rgba(56,56,56,0.7379213826040203) 50%, rgba(50,50,50,0.8783708208062675) 100%); 
+  border: 1px solid #000;
+  border-radius: 10px;
 }
 #cheatsbutton{
   display: none;
 }
-#numbers{
+.numbers{
     color: #fff;
     font-size: 64px;
     animation: none;
-    animation: colorChange 3s infinite;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    display: inline-block;
+    animation: colorChange 3s infinite;
+    position: static;
+  }
+#number2{
 }
 #bottombar{
   position: absolute;
   bottom: 0px;
   width: 98.5%;
   padding-left: 0.5%;
-  height: 48px;
+  height: 50px;
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,0.7603932927163799) 0%, rgba(44,44,44,0.7294944163118855) 49%, rgba(56,56,56,0.7379213826040203) 50%, rgba(50,50,50,0.8783708208062675) 100%); 
   border: 1px solid #000;
+  border-bottom: 0;
   color: #fff;
   border-radius: 24px;
   margin-left: 0.5%;
@@ -166,4 +204,12 @@ button{
   margin-right: 20px;
   font-size: 36px;
   color: #ffffff99;
+}
+
+@keyframes roulette{
+  0% {transform: rotate(-3600deg);}
+  100% {transform: rotate(360deg);}
+}
+#rouletteball{
+  transform-origin: 1%;
 }
