@@ -1,4 +1,7 @@
 let money = 600;
+let clicksToReward = 100;
+
+console.log("pls do not break the game")
 
 selectMachines(5);
 
@@ -31,6 +34,14 @@ function showError(text) {
     document.getElementById("error").style.display="inline-block";
     setTimeout(hideError, 1500);
 }
+function hideNotification() {
+    document.getElementById("notification").style.display="none";
+}
+function showNotification(text) {
+    document.getElementById("notification").innerHTML=text;
+    document.getElementById("notification").style.display="inline-block";
+    setTimeout(hideNotification, 3000);
+}
 
 function selectMachines(machine) {
     if (machine == 5) {
@@ -57,27 +68,31 @@ function selectMachines(machine) {
     if (machine == 1500) {
         console.log(machine);
         price = 1500;
-        threeNumbers = 25000;
-        threeSevens = 75000;
+        threeNumbers = 50000;
+        threeSevens = 300000;
         document.getElementById("price").innerText="$1500"
     }
     document.getElementById("machinesmenu").style.display="none";
 }
 
 function Run() {
+    getKey();
     if (money < price) {
         showError("You don't have money!");
     }
     else {
         payLoan();
-        document.getElementById("numbers").style.animation = "none";
+        document.getElementById("number1").style.animation = "none";
+        document.getElementById("number2").style.animation = "none";
+        document.getElementById("number3").style.animation = "none";
         document.body.style.animation = "none";
         money -= price
         const firstNum = Math.floor(Math.random() * 7) + 1;
         const secondNum = Math.floor(Math.random() * 7) + 1;
         const thirdNum = Math.floor(Math.random() * 7) + 1;
-        document.getElementById("numbers").innerHTML =
-        firstNum + "" + secondNum + "" + thirdNum;
+        document.getElementById("number1").innerHTML = firstNum;
+        document.getElementById("number2").innerHTML = secondNum;
+        document.getElementById("number3").innerHTML = thirdNum;
         updateMoney();
         if (firstNum == 7 && secondNum == 7 && thirdNum == 7) {
             money += threeSevens
@@ -85,16 +100,18 @@ function Run() {
             document.body.style.animationName = "backChange";
             document.body.style.animationDuration = "3s";
             document.body.style.animationIterationCount = "infinite";
-            document.getElementById("numbers").style.animationName = "colorChange";
-            document.getElementById("numbers").style.animationDuration = "3s";
-            document.getElementById("numbers").style.animationIterationCount = "Infinite";
+            document.getElementById("number1").style.animation = "colorChange 3s infinite";
+            document.getElementById("number2").style.animation = "colorChange 3s infinite";
+            document.getElementById("number3").style.animation = "colorChange 3s infinite";
         }
         else if (firstNum == secondNum && secondNum == thirdNum) {
             money += threeNumbers
-            document.getElementById("numbers").style.animationName = "colorChange";
-            document.getElementById("numbers").style.animationDuration = "3s";
-            document.getElementById("numbers").style.animationIterationCount = "Infinite";
+            document.getElementById("number1").style.animation = "colorChange 3s infinite";
+            document.getElementById("number2").style.animation = "colorChange 3s infinite";
+            document.getElementById("number3").style.animation = "colorChange 3s infinite";
             updateMoney();
+            console.log(firstNum + "" + secondNum + "" + thirdNum);
         }
     }
+
 }
