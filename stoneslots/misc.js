@@ -47,15 +47,19 @@ function openBox(box) {
                 if (boxitem <= 5) {
                     money += 1500;
                     item = "$1500";
-                } else if (boxitem > 5 && boxitem <= 8) {
+                } else if (boxitem > 5 && boxitem <= 7) {
                     money += 5000;
                     item = "$5000";
-                } else {
+                } else if (boxitem == 8 || boxitem == 9) {
                     money += 15000;
                     item = "$15000";
+                } else {
+                    goldenKey++;
+                    item = "Golden Key";
                 }
                 showNotification('You got a '+item+'!');
                 updateMoney();
+                console.log(boxitem + ' You got a '+item+'!');
             }
             break;
         case "golden":
@@ -63,7 +67,23 @@ function openBox(box) {
                 showError("You need a golden key!");
             } else {
                 goldenKey -= 1;
-                showError('Do not cheat you silly!')
+                let boxitem = Math.floor(Math.random() * 10) + 1;
+                if (boxitem <= 5) {
+                    money += 15000;
+                    item = "$15000";
+                } else if (boxitem > 5 && boxitem <= 7) {
+                    money += 30000;
+                    item = "$30000";
+                } else if (boxitem == 8 || boxitem == 9) {
+                    money += 75000;
+                    item = "$75000";
+                } else {
+                    money = money * 2;
+                    item = "Double!";
+                }
+                showNotification('You got a '+item+'!');
+                updateMoney();
+                console.log(boxitem + ' You got a '+item+'!');
             }
             break;
     }
