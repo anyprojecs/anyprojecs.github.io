@@ -67,19 +67,19 @@ function openBox(box) {
                 showError("You need a golden key!");
             } else {
                 goldenKey -= 1;
-                let boxitem = Math.floor(Math.random() * 10) + 1;
-                if (boxitem <= 5) {
-                    money += 15000;
-                    item = "$15000";
-                } else if (boxitem > 5 && boxitem <= 7) {
+                let boxitem = Math.floor(Math.random() * 100) + 1;
+                if (boxitem <= 50) {
+                    money += 7500;
+                    item = "$7500";
+                } else if (boxitem > 50 && boxitem <= 89) {
                     money += 30000;
                     item = "$30000";
-                } else if (boxitem == 8 || boxitem == 9) {
+                } else if (boxitem > 90 && boxitem <= 98) {
                     money += 75000;
                     item = "$75000";
                 } else {
                     money = money * 2;
-                    item = "Double!";
+                    item = "Double";
                 }
                 showNotification('You got a '+item+'!');
                 updateMoney();
