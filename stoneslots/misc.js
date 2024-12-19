@@ -69,14 +69,14 @@ function openBox(box) {
                 goldenKey -= 1;
                 let boxitem = Math.floor(Math.random() * 100) + 1;
                 if (boxitem <= 50) {
-                    money += 7500;
-                    item = "$7500";
+                    money += 50000;
+                    item = "$50000";
                 } else if (boxitem > 50 && boxitem <= 89) {
-                    money += 30000;
-                    item = "$30000";
+                    money += 100000;
+                    item = "$100000";
                 } else if (boxitem > 90 && boxitem <= 98) {
-                    money += 75000;
-                    item = "$75000";
+                    money += 250000;
+                    item = "$250000";
                 } else {
                     money = money * 2;
                     item = "Double";
