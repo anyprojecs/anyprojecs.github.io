@@ -14,11 +14,6 @@ function updateMoney() {
 }
 updateMoney();
 
-function AddMoney() {
-    money += 1000;
-    document.getElementById("money").innerHTML="Money: "+money;
-}
-
 function showMenu(menu) {
     document.getElementById(menu).style.display="block";
 }
@@ -94,6 +89,7 @@ function Run() {
         document.getElementById("number2").innerHTML = secondNum;
         document.getElementById("number3").innerHTML = thirdNum;
         updateMoney();
+        earnXp(10);
         if (firstNum == 7 && secondNum == 7 && thirdNum == 7) {
             money += threeSevens
             updateMoney();
@@ -113,5 +109,5 @@ function Run() {
             console.log(firstNum + "" + secondNum + "" + thirdNum);
         }
     }
-
+    document.getElementById("clickstosilverkey").innerHTML = "Clicks left to next silver key: " + clicksToReward;
 }
