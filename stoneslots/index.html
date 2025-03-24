@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="mobile.css">
         <link rel="icon" type="image/x-icon" href="img/stoneslotsfavicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/42ba3d762a.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="background"></div>
@@ -22,19 +23,24 @@
         <p id="error">Error</p>
         <div id="notification">Notification</div>
         <div id="bottombar">
-            <button onclick='showMenu("sellmenu")'>Sell</button>
-            <button onclick='showMenu("loanmenu")'>Loans</button>
-            <button onclick='showMenu("machinesmenu")'>Machines</button>
+            <button onclick='showMenu("sellmenu")'><i class="fa-solid fa-money-bill"></i></button>
+            <button onclick='showMenu("machinesmenu")'><i class="fa-solid fa-coins"></i></button>
             <button onclick='showMenu("cheatmenu")' id="cheatsbutton">Cheats</button>
-            <button onclick='showMenu("miscmenu")'>Misc</button>
-            <p id="money">0</p>
-            <p id="version">v8.1</p>
+            <button onclick='showMenu("miscmenu")'><i class="fa-solid fa-bars"></i></button>
+            <button onclick="profileMenu()"><i class="fa-solid fa-user"></i></button>
+            <p id="money" >0</p>
+            <p id="xp">Lv0 0/400XP</p>
+            <p id="version">v9</p>
         </div>
 
         <div class="menu" id="sellmenu">
             <h1>Sell</h1>
             <button id="sellpc" onclick="sellPC()">PC $250</button>
             <button id="sellcar" onclick="sellCar()">Car $1500</button>
+            <br>
+            <h1>Take a loan</h1>
+            <button onclick="tookLoan(1200)">$1200 | 16.67% interest rate</button>
+            <button onclick="tookLoan(5400)">$5400 | 3.70% interest rate</button>
             <br>
             <button onclick="hideMenu('sellmenu');">Close</button>
         </div>
@@ -62,9 +68,10 @@
         </div>
         <div class="menu" id="cheatmenu">
             <h1>Cheat menu</h1>
-            <button onclick="AddMoney()">add money</button>
-            <button onclick="silverKey += 10">more silver keys</button>
-            <button onclick="goldenKey += 10">more golden keys</button>
+            <button onclick="money += 10000">add money</button>
+            <button onclick="silverKey += 10">+10 silver keys</button>
+            <button onclick="goldenKey += 10">+10 golden keys</button>
+            <button onclick="earnXp(1000)">+1000 xp</button>
             <br><br>
             <button onclick="hideMenu('cheatmenu');">Close</button>
         </div>
@@ -106,6 +113,19 @@
             <button onclick="hideMenu('roulettemenu');">Close</button>
         </div>
 
+        <div id="profileMenu">
+            <h1>Profile</h1>
+            <p id='level'>Lv0 0/0xp</p>
+            <h3>Trophies</h3>
+            <p id="trophyInfo">You have no trophies right now.</p>
+            <img class='trophy' id='bt' src="trophies/bronzetrophy.png">
+            <img class='trophy' id='st' src="trophies/silvertrophy.png">
+            <img class='trophy' id='gt' src="trophies/goldentrophy.png">
+            <img class='trophy' id='pt' src="trophies/platinumtrophy.png">
+            <p id='clickstosilverkey'>Clicks left to next silver key: 100</p>
+        </div>
+
+        <script src="profile.js"></script>
         <script src="main.js"></script>
         <script src="misc.js"></script>
         <script src="loans.js"></script>
