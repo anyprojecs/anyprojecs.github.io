@@ -70,6 +70,14 @@ button{
   right: 15px;
   color: #ffffff22;
 }
+#changelog{
+  font-size: 16px;
+  display: inline;
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+  color: #ffffff77;
+}
 .menu{
   display: none;
   padding: 50px;
@@ -169,17 +177,17 @@ button{
 #bottombar{
   position: absolute;
   bottom: 0px;
-  width: 98.5%;
-  padding-left: 0.5%;
+  width: 97%;
+  padding-left: 0.7%;
+  padding-right: 0.7%;
   height: 50px;
   background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,0.7603932927163799) 0%, rgba(44,44,44,0.7294944163118855) 49%, rgba(56,56,56,0.7379213826040203) 50%, rgba(50,50,50,0.8783708208062675) 100%); 
+  background: linear-gradient(0deg, rgba(0,0,0,0.7603932927163799) 0%, rgba(44,44,44,0.7294944163118855) 49%, rgba(56,56,56,0.7379213826040203) 50%, rgba(50,50,50,0.8783708208062675) 100%);
   border: 1px solid #000;
   border-bottom: 0;
   color: #fff;
-  border-radius: 24px;
-  margin-left: 0.5%;
-  margin-bottom: 0.5%;
+  border-radius: 15px 15px 0 0;
+  margin-left: 0.8%;
 }
 #bottombar button{
   height: 48px;
@@ -207,9 +215,11 @@ button{
   margin: 0;
   display: inline;
   float: right;
-  margin-right: 20px;
-  font-size: 36px;
+  margin-top: 4px;
+  margin-right: 4px;
+  font-size: 30px;
   color: #ffffff99;
+  padding-left: 15px;
 }
 
 @keyframes roulette{
@@ -218,4 +228,33 @@ button{
 }
 #rouletteball{
   transform-origin: 1%;
+}
+
+#profileMenu {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background-color: #000000aa;
+  color: #ffffffc5;
+  width: 300px;
+  right: 0px;
+  bottom: 60px;
+  position: absolute;
+  border-radius: 15px 0px 0 15px;
+  border: 2px solid #000;
+}
+.trophy{
+  width: 64px;
+  height: 64px;
+  display: none;
+}
+#xp{
+  display: inline-block;
+  font-size: 24px;
+  margin: 0;
+  color: #ffffff99;
+  border-right: 1px solid #222;
+  padding-right: 15px;
+  float: right;
+  margin-top: 8px;
 }
