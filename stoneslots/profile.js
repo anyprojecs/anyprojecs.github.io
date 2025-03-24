@@ -10,23 +10,23 @@ function unlockTrophy() {
             document.getElementById("trophyInfo").style = "display: none;";
             document.getElementById("bt").style = "display: inline-block";
             showNotification("New trophy unlocked!<br><br><img width='32' height='32' src='trophies/bronzetrophy.png'><br>");
-            silverKey += 5;
+            silverKey += 1;
             break;
 
         case 20:
             document.getElementById("st").style = "display: inline-block";
             showNotification("New trophy unlocked!<br><br><img width='32' height='32' src='trophies/silvertrophy.png'><br>");
-            silverKey += 10;
+            silverKey += 4;
             break;
         case 50:
             document.getElementById("gt").style = "display: inline-block";
             showNotification("New trophy unlocked!<br><br><img width='32' height='32' src='trophies/goldentrophy.png'><br>");
-            goldenKey += 2
+            silverKey += 8
             break;
         case 100:
             document.getElementById("pt").style = "display: inline-block";
             showNotification("New trophy unlocked!<br><br><img width='32' height='32' src='trophies/platinumtrophy.png'><br>");
-            goldenKey += 5
+            goldenKey += 2
             break;
     }
 }
