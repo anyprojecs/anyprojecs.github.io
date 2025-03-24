@@ -46,12 +46,15 @@ function openBox(box) {
                 let boxitem = Math.floor(Math.random() * 10) + 1;
                 if (boxitem <= 5) {
                     money += 1500;
+                    earnXp(150);
                     item = "$1500";
                 } else if (boxitem > 5 && boxitem <= 7) {
                     money += 5000;
+                    earnXp(500);
                     item = "$5000";
                 } else if (boxitem == 8 || boxitem == 9) {
                     money += 15000;
+                    earnXp(1500);
                     item = "$15000";
                 } else {
                     goldenKey++;
@@ -70,15 +73,19 @@ function openBox(box) {
                 let boxitem = Math.floor(Math.random() * 100) + 1;
                 if (boxitem <= 50) {
                     money += 50000;
+                    earnXp(10000);
                     item = "$50000";
                 } else if (boxitem > 50 && boxitem <= 89) {
                     money += 100000;
+                    earnXp(20000);
                     item = "$100000";
                 } else if (boxitem > 90 && boxitem <= 98) {
                     money += 250000;
+                    earnXp(50000);
                     item = "$250000";
                 } else {
                     money = money * 2;
+                    earnXp(100000);
                     item = "Double";
                 }
                 showNotification('You got a '+item+'!');
