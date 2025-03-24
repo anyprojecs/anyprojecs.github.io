@@ -8,18 +8,47 @@
         border-left: 0;
         border-right: 0;
         border-bottom: 0;
+        opacity: 60%;
+    }
+    #bottombar button{
+        color: #fff;
     }
     #money{
         position: absolute;
-        bottom: 50px;
+        bottom: 75px;
         transform: translate(-50%);
         left: 50%;
         color: #fff;
         text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+    }
+    #xp{
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
+        color: #ffffffaa;
+        text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
     #error{
         bottom: 100px;
         font-size: 24px;
     }
     #version { right: 10px; }
+    #profileMenu {
+        display: none;
+        padding: 20px;
+        text-align: center;
+        background-color: #000000aa;
+        color: #ffffffc5;
+        width: 300px;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        border-radius: 15px;
+        border: 2px solid #000;
+    }
+    
   }
