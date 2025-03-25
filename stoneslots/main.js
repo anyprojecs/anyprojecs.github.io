@@ -63,8 +63,8 @@ function selectMachines(machine) {
     if (machine == 1500) {
         console.log(machine);
         price = 1500;
-        threeNumbers = 50000;
-        threeSevens = 300000;
+        threeNumbers = 75000;
+        threeSevens = 350000;
         document.getElementById("price").innerText="$1500"
     }
     document.getElementById("machinesmenu").style.display="none";
