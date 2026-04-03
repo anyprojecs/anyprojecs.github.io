@@ -4,8 +4,10 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
-    background: rgb(172,127,147);
-    background: radial-gradient(circle, rgba(172,127,147,1) 0%, rgba(123,155,192,1) 100%); 
+    background: #cc70cf;
+    background: linear-gradient(339deg, rgb(230, 142, 233) 0%, rgb(69, 198, 224) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #ffffffaa;
     text-align: center;
 }
@@ -47,23 +49,27 @@ a{
     text-decoration: none;
     margin-left: 25px;
     margin-right: 25px;
-    transition: transform .2s;
-    margin-bottom: 10px;
+    transition: all .2s;
 }
 a:hover{
     transform: scale(1.1);
+    color: #ffffffaa;
+    text-shadow: 0px 0px 11px rgba(238, 238, 238, 1);
 }
 #footer{
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
-    border-top: 1px #ffffff33 solid;
     color: #ffffffaa;
     bottom: 0px;
     position: absolute;
     width: 100%;
 }
-@media only screen and (max-width: 1079px) {
+#footer a{
+    display: inline-block;
+    margin: 0;
+}
+@media only screen and (max-width: 1023px) {
     #header{
         font-size: 45px;
     }
