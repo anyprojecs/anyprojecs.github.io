@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>grabber viewer</title>
+</head>
+<body>
+    <header>
+        <h1>grabber viewer</h1>
+    </header>
+    <div class="container">
+        <div class="display-container">
+            <video id="display" autoplay playsinline width="800" height="600"></video>
+        </div>
+
+        <section id="resolution">
+            <h3>resolution</h3>
+            <label for="width">width</label>
+            <input type="number" id="inputWidth" placeholder="800" min="1">
+            <label for="width">height</label>
+            <input type="number" id="inputHeight" placeholder="600" min="1">
+            <button onclick="applyResolution()">Apply</button>
+        </section>
+        </div>
+        <footer>
+            made by anyprojecs | 2026
+        </footer>
+    
+    <script>
+        const mediaOutput = document.getElementById('mediaOutput');
+        const webcamElement = document.getElementById('display');
+
+        let mediaStream; // To store the active webcam stream
+
+        async function startWebcam(width, height) {
+            if (width == '' || height == ''){
+                width = 800
+                height = 600
+            }
+            try {
+                // Request webcam access with video only (audio: false)
+                const constraints = { video: {width: { ideal: width },height: { ideal: height } } , audio: true  };
+                mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+                
+                webcamElement.srcObject = mediaStream;
+                
+            } catch (error) {
+                alert(error);
+            }
+        }
+
+        function applyResolution(){
+            const width = document.getElementById('inputWidth').value
+            const height = document.getElementById('inputHeight').value
+
+            startWebcam(width, height)
+
+        }
+        startWebcam()
+        </script>
+</body>
+</html>
