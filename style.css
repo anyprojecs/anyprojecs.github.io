@@ -69,7 +69,7 @@ a:hover{
     display: inline-block;
     margin: 0;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 799px) {
     #header{
         font-size: 45px;
     }
