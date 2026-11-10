@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://frutigeraeroarchive.org/images/wallpapers/windows_xp/windows_xp_16.jpg);
+    background-repeat: no-repeat;
+}
+form{
+    height: 30px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: blanchedalmond;
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+}
+form, .window header {
+    height: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 15px;
+    padding-right: 6px;
+    border-bottom: 1px solid #0d4bd6;
+    background: rgb(0,59,214);
+    background: linear-gradient(0deg, rgba(0,59,214,1) 0%, rgba(0,91,220,1) 5%, rgba(2,106,254,1) 11%, rgba(20,100,234,1) 55%, rgba(28,114,240,1) 82%, rgba(55,142,255,1) 90%, rgba(59,153,255,1) 98%, rgba(0,89,232,1) 100%);
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+    text-shadow: 1px 1px 0px rgba(66, 68, 90, 1);
+}
+form * {
+    height: auto;
+    padding: 0;
+    margin: 0;
+
+
+}
+main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+
+    background-color: #00000033;
+    backdrop-filter: blur(10px);
+}
+.window {
+    min-width: calc(50% - 6px);
+    height: 400px;
+    float: left;
+    margin: 2px;
+
+    background-color: #fff;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid #0d4bd6;
+}
+.window:nth-child(odd):last-child {
+    width: 100%;
+}
+
+.window header {
+    border-radius: 5px 5px 0px 0px;
+    width: auto;
+
+}
+.window header button {
+    background-color: #00000000;
+    color: #fff;
+    float: right;
+    border: none;
+
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(66, 68, 90, 1);
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+.window iframe {
+    min-width: 100%;
+    height: calc(100% - 34px);
+    border: none;
+}
+
+#loadingIndicator {
+color: white;
+display: inline;
+visibility: hidden;
+float: right;
+}
